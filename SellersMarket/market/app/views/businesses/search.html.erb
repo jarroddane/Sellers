@@ -1,0 +1,19 @@
+<h1><strong><%= pluralize(@businesses.size, 'development agency') %></strong> 
+within <strong><%= h @within %> miles</strong>:</h1> 
+
+	<ul> 
+	  <% for business in @businesses %> 
+	<li> 
+
+	<p> 
+     <strong><%= link_to business.name, business %></strong> at <%= h business.address %><br/> 
+     <i>(<%= sprintf("%.2f", business.distance) %> miles away)</i> 
+	</p>
+	 
+	</li> 
+      <% end %> 
+
+	</ul> 
+
+<div id="map" style="width:500px; height:400px;"></div> 
+
