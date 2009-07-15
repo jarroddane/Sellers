@@ -1,0 +1,12 @@
+digraph controllers_diagram {
+	graph[overlap=false, splines=true]
+	"BusinessesController" [shape=Mrecord, label="{BusinessesController|\l|\l|\l}"]
+	"CustomersController" [shape=Mrecord, label="{CustomersController|\l|\l|\l}"]
+	"InvoicesController" [shape=Mrecord, label="{InvoicesController|\l|\l|\l}"]
+	"LineItemsController" [shape=Mrecord, label="{LineItemsController|\l|\l|\l}"]
+	"ProductsController" [shape=Mrecord, label="{ProductsController|\l|\l|\l}"]
+	"SessionsController" [shape=Mrecord, label="{SessionsController|\l|\l|\l}"]
+	"UsersController" [shape=Mrecord, label="{UsersController|\l|\l|\l}"]
+	"WarehouseController" [shape=Mrecord, label="{WarehouseController|\l|\l|back_to_the_index_page\lget_basket\l}"]
+	"ApplicationController" [shape=Mrecord, label="{ApplicationController|\l|\l|\l}"]
+}

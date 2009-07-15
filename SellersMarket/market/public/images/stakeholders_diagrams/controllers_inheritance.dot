@@ -1,0 +1,23 @@
+digraph controllers_diagram {
+	graph [overlap=false, splines=true];
+	node [label="\N"];
+	graph [bb="0,0,1146,340"];
+	BusinessesController [label="{BusinessesController|create\ldestroy\ledit\lindex\lnew\lsearch\lshow\lupdate\l|\l|\l}", shape=Mrecord, pos="67,104", width="1.86", height="2.89"];
+	CustomersController [label="{CustomersController|create\ldestroy\ledit\lindex\lnew\lshow\lupdate\l|\l|\l}", shape=Mrecord, pos="218,104", width="1.83", height="2.67"];
+	InvoicesController [label="{InvoicesController|create\ldestroy\ledit\lindex\lnew\lshow\lupdate\l|\l|\l}", shape=Mrecord, pos="362,104", width="1.67", height="2.67"];
+	LineItemsController [label="{LineItemsController|create\ldestroy\ledit\lindex\lnew\lshow\lupdate\l|\l|\l}", shape=Mrecord, pos="505,104", width="1.81", height="2.67"];
+	ProductsController [label="{ProductsController|create\ldestroy\ledit\lindex\lnew\lshow\lupdate\l|\l|\l}", shape=Mrecord, pos="649,104", width="1.69", height="2.67"];
+	SessionsController [label="{SessionsController|create\ldestroy\lnew\l|\l|\l}", shape=Mrecord, pos="789,104", width="1.69", height="1.78"];
+	UsersController [label="{UsersController|create\ldestroy\ledit\lindex\lnew\lupdate\l|\l|\l}", shape=Mrecord, pos="920,104", width="1.44", height="2.44"];
+	WarehouseController [label="{WarehouseController|add_to_basket\lerase_basket\lfinish_shopping\lindex\lsave_invoice\l|\l|back_to_the_index_page\lget_basket\l\
+}", shape=Mrecord, pos="1068,104", width="2.17", height="2.44"];
+	ApplicationController [label="{ApplicationController|time_and_date\l|\l|\l}", shape=Mrecord, pos="577,292", width="1.94", height="1.33"];
+	ApplicationController -> BusinessesController [arrowhead=none, arrowtail=onormal, pos="s,507,244 498,241 348,191 275,291 135,208"];
+	ApplicationController -> CustomersController [arrowhead=none, arrowtail=onormal, pos="s,507,244 497,240 412,210 366,260 285,208 281,206 278,203 275,200"];
+	ApplicationController -> InvoicesController [arrowhead=none, arrowtail=onormal, pos="s,507,244 498,239 469,226 451,232 423,208 420,206 418,203 415,200"];
+	ApplicationController -> LineItemsController [arrowhead=none, arrowtail=onormal, pos="s,558,244 554,234 550,224 546,211 542,200"];
+	ApplicationController -> ProductsController [arrowhead=none, arrowtail=onormal, pos="s,596,244 600,234 604,224 608,211 612,200"];
+	ApplicationController -> SessionsController [arrowhead=none, arrowtail=onormal, pos="s,647,244 656,239 684,226 701,232 728,208 740,197 751,183 759,168"];
+	ApplicationController -> UsersController [arrowhead=none, arrowtail=onormal, pos="s,647,244 657,240 742,210 790,264 868,208 874,204 879,198 884,192"];
+	ApplicationController -> WarehouseController [arrowhead=none, arrowtail=onormal, pos="s,647,244 657,241 793,195 859,281 990,208 998,204 1005,198 1011,192"];
+}

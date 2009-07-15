@@ -22,8 +22,9 @@
 
  <body id="warehouse"> 
 
- <div id="logo"> 
- <%= image_tag("market_logo_remix.gif") %> 
+ <div id="logo" align="left"> 
+	
+ <%= image_tag("sellers.gif") %> 
  <%= @page_label || "" %> 
    
 
@@ -37,8 +38,10 @@
 	
 	<!-- alright, the trick here is to stack the DIV's. -->	
 			</div>
-			_____________________________________________
+		
 			<div id="search-area">
+				
+						Search the site <input type="text/submit/hidden/button" name="some_name" value="" id="some_name">
 		
 				</div>
     </div> 
@@ -61,24 +64,34 @@
 	
 
 				<div id="top-search-area">
-					Search the site <input type="text/submit/hidden/button" name="some_name" value="" id="some_name">
+				
 					</div>
 					
 							<div id="top-right-search-area" align="right">
-								Search the web <input type="text/submit/hidden/button" name="some_name" value="" id="some_name">
+							
 								</div>		
 
 
 	
 	</div>
 	
+	<br>
 <!--  The side area for the shopping basket.  You have to register and log in to use it -->	
  <div id="side-basket"> 
 	
 	<div id="login-area">
-		<a href="http://localhost:3000/users/new">User Registration</a></p>
-		<a href="http://localhost:3000/session/new">Customer Login</a></p>
-		<a href="http://localhost:3000/session/new">Administration</a>
+		
+	<!-- >	<a href="http://localhost:3000/session/new">User Login</a></p>
+		    <a href="http://localhost:3000/users/new">Registration</a></p> --> 
+	
+
+		<li><a href="http://localhost:3000/session/new">User Login</a></li>
+		<li><a href="http://localhost:3000/users/new">User User Registration</a></li>
+		<li><%= link_to 'Products', products_path %></li> 
+		<li><%= link_to 'Register',  users_path %></li> 
+		<li><%= link_to 'Log-In', new_session_path %></li>
+		
+
 		
 		</div>
 	
@@ -87,10 +100,13 @@
 	
 	</div>
 	
+
+	
 	<% div_disappear_if(@basket.items.empty?, :id => "basket") do %>
 	   <%= render(:partial => "basket", :object => @basket) %>
 	<% end %>
 
+	
 	
  </div> 
 
@@ -101,26 +117,38 @@
 		
 		<div id="warehouse-top-area-wrapper" align="left">
 	
-			<p> Add controls here and remove the visible borders
+			<h3> User Area
 				
-				</p>
+				</h3>
 		
-			<div id="warehouse-top-area-1">
+			<div id="warehouse-top-area-1" align="right">
 	
-			<p>
-				Content
-				</p>
-	
-	
+				
+						Select by Category 
+						<select>
+						  <option>Recent Products</option>
+						  <option>Hot Buys</option>
+						  <option>Wish Basket</option>
+						</select>
+			
 	
 			</div>
-	
-	
-				</div>
+			
+				<div>
+					TESTING
 
+					</div>
+	
 	
 				</div>
+				
+	
+				</div>
+				
+				
 </div>
+
+
 
  <div id="main"> 
 	
@@ -132,7 +160,9 @@
 
  <%= yield :layout %> 
 
+
  </div> 
+
 
  </div> 
 

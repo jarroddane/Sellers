@@ -1,0 +1,12 @@
+digraph controllers_diagram {
+	graph[overlap=false, splines=true]
+	"BusinessesController" [shape=Mrecord, label="{BusinessesController|create\ldestroy\ledit\lindex\lnew\lsearch\lshow\lupdate\l|\l|\l}"]
+	"CustomersController" [shape=Mrecord, label="{CustomersController|create\ldestroy\ledit\lindex\lnew\lshow\lupdate\l|\l|\l}"]
+	"InvoicesController" [shape=Mrecord, label="{InvoicesController|create\ldestroy\ledit\lindex\lnew\lshow\lupdate\l|\l|\l}"]
+	"LineItemsController" [shape=Mrecord, label="{LineItemsController|create\ldestroy\ledit\lindex\lnew\lshow\lupdate\l|\l|\l}"]
+	"ProductsController" [shape=Mrecord, label="{ProductsController|create\ldestroy\ledit\lindex\lnew\lshow\lupdate\l|\l|\l}"]
+	"SessionsController" [shape=Mrecord, label="{SessionsController|create\ldestroy\lnew\l|\l|\l}"]
+	"UsersController" [shape=Mrecord, label="{UsersController|create\ldestroy\ledit\lindex\lnew\lupdate\l|\l|\l}"]
+	"WarehouseController" [shape=Mrecord, label="{WarehouseController|add_to_basket\lerase_basket\lfinish_shopping\lindex\lsave_invoice\l|\l|\l}"]
+	"ApplicationController" [shape=Mrecord, label="{ApplicationController|time_and_date\l|\l|\l}"]
+}

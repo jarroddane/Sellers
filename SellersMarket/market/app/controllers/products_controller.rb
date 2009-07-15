@@ -3,12 +3,6 @@ class ProductsController < ApplicationController
   # GET /products.xml
   def index
     @products = Product.find(:all)
-    
-    unless params[:query].blank
-       query = ['CONCAT(label, description) LIKE ? , "%#{params[:query]}%']
-    end
-    
-    @products = Product.find(:all, :conditions => query)
 
     respond_to do |format|
       format.html # index.html.erb

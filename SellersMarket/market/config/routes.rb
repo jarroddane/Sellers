@@ -1,4 +1,6 @@
 ActionController::Routing::Routes.draw do |map|
+  
+  map.resource  :user
   map.resources :users
 
   map.resource :session
@@ -19,6 +21,8 @@ ActionController::Routing::Routes.draw do |map|
   map.resources :invoices
 
   map.resources :products
+  
+  map.root :controller => 'warehouse', :action => 'index'
 
   # The priority is based upon order of creation: first created -> highest priority.
 

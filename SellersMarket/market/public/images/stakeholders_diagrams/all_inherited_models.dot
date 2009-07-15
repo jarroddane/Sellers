@@ -1,0 +1,17 @@
+digraph models_diagram {
+	graph [overlap=false, splines=true];
+	node [label="\N"];
+	graph [bb="0,0,1038,292"];
+	Basket [label="{Basket|}", shape=record, pos="27,212", rects="0,212,54,236 0,188,54,212", width="0.75", height="0.67"];
+	BasketItem [label="{BasketItem|}", shape=record, pos="112,212", rects="72,212,152,236 72,188,152,212", width="1.11", height="0.67"];
+	Business [label="{Business|name :string\laddress :string\llat :float\llng :float\lcreated_at :datetime\lupdated_at :datetime\l}", shape=Mrecord, pos="236,212", width="1.83", height="1.78"];
+	Customer [label="{Customer|name :string\lhashed_password :string\lsalt :string\lcreated_at :datetime\lupdated_at :datetime\l}", shape=Mrecord, pos="397,212", width="2.14", height="1.56"];
+	Invoice [label="{Invoice|name :string\laddress :text\lemail :string\ltransaction_type :string\lcreated_at :datetime\lupdated_at :datetime\l}", shape=Mrecord, pos="566,212", width="2.06", height="1.78"];
+	LineItem [label="{LineItem|quantity :integer\lprice_sum :integer\lcreated_at :datetime\lupdated_at :datetime\l}", shape=Mrecord, pos="645,48", width="1.83", height="1.33"];
+	Product [label="{Product|label :string\ldescription :text\limage_url :string\lvideo_url :string\lcreated_at :datetime\lupdated_at :datetime\lpri\
+ce :decimal\l}", shape=Mrecord, pos="724,212", width="1.83", height="2.00"];
+	User [label="{User|login :string\lemail :string\lcrypted_password :string\lsalt :string\lcreated_at :datetime\lupdated_at :datetime\lremember\
+_token :string\lremember_token_expires_at :datetime\l}", shape=Mrecord, pos="923,212", width="3.19", height="2.22"];
+	Invoice -> LineItem [arrowtail=crow, arrowhead=dot, dir=both, pos="s,597,148 e,622,96 601,139 607,127 612,114 618,103"];
+	Product -> LineItem [arrowtail=crow, arrowhead=dot, dir=both, pos="s,689,140 e,668,96 685,131 680,122 676,112 672,103"];
+}

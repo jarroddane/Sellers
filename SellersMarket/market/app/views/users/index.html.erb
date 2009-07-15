@@ -1,0 +1,27 @@
+
+<h1>Shop till you drop</h1>
+
+<div align="right">
+
+</div>
+
+
+<% for user in @users -%>
+
+	<div class="display">
+	
+		<%= image_tag(user.image_url) %>
+		
+	
+		<h3><%=h user.name %></h3>
+		
+		<%= user.overview %>
+		
+	
+		<% end %>
+		
+		
+		
+	</div>
+	
+<% end %>

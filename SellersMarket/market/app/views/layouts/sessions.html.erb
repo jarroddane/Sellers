@@ -1,0 +1,129 @@
+ <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" 
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd"> 
+ <html> 
+ <head> 
+
+	 <title>The Sellers Market</title> 
+
+	 <!-- START Cascading Stylesheet Implementation-->
+	 <%= stylesheet_link_tag "market", :media => "all" %> 
+	 <!-- END Cascading Stylesheet Implementation-->
+
+	 <!-- START_JavaScripting -->
+	 <%= javascript_include_tag :defaults %>
+	 <!-- END of JavaScripting -->
+
+	 <!--  This is the loading of the Javascript API for GeoCoding (Google Maps)  -->
+	<script src="http://maps.google.com/maps?file=api&v=2&key=abcdefg&sensor=true_or_false" type="text/javascript">
+	</script>
+
+
+	</head> 
+
+	 <body id="warehouse"> 
+
+	 <div id="logo" align="left"> 
+
+	 <%= image_tag("sellers.gif") %> 
+	 <%= @page_label || "" %> 
+
+
+	<!--  Date and Time Information (when the user last logged on etc.) -->
+	    <div id="time-area" align="right">
+
+				<%= Time.now.to_s(:chatty) %>
+
+			<div>
+
+
+		<!-- alright, the trick here is to stack the DIV's. -->	
+				</div>
+
+				<div id="search-area">
+
+							Search the web <input type="text/submit/hidden/button" name="some_name" value="" id="some_name">
+
+					</div>
+	    </div> 
+
+	</div> 
+
+	<!-- Primary Links .  Add a DIV above this one, and you will add a level above this area. -->
+	 <div id="columns"> 
+
+		<div id="warehouse_primary_link_rows">
+
+
+		<div id="top-links">
+		 <a href="http://localhost:3000/products">Main-Page</a> 
+		 <a href="http://localhost:3000/services">Services</a>
+		 <a href="http://localhost:3000/news">News</a>
+	     <a href="http://localhost:3000/events">Events</a>
+		 <a href="http://localhost:3000/support">Support</a>
+		 <a href="http://localhost:3000/contact">Contact-Us</a>
+
+
+					<div id="top-search-area">
+
+						</div>
+
+								<div id="top-right-search-area" align="right">
+
+									</div>		
+
+
+
+		</div>
+
+		<br>
+	<!--  The side area for the shopping basket.  You have to register and log in to use it -->	
+	 <div id="side-basket"> 
+
+		<div id="login-area">
+			<a href="http://localhost:3000/users/new">User Registration</a></p>
+			<a href="http://localhost:3000/session/new">Customer Login</a></p>
+			<a href="http://localhost:3000/session/new">Administration</a>
+
+			</div>
+
+
+		<div id="login-area">
+
+		</div>
+
+
+
+	 </div> 
+
+		<!--  This is the main area for the rest of the site -->
+		<div align="right" color="white">
+			<div>
+
+
+
+
+
+					</div>
+	</div>
+
+	 <div id="main-users"> 
+
+		<% if flash[:notice] -%>
+
+		<div id="alert"><%= flash[:notice] %></div>
+		
+		<div id="main-registered-users">
+			THIS AREA SHOULD HOLD THE REGISTERED USERS LOGIN
+			</div>
+
+		<% end -%>
+
+	 <%= yield :layout %> 
+
+	 </div> 
+
+	 </div> 
+
+	 </body> 
+
+	 </html>

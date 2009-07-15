@@ -1,0 +1,14 @@
+digraph controllers_diagram {
+	graph [overlap=false, splines=true];
+	node [label="\N"];
+	graph [bb="0,0,1304,112"];
+	BusinessesController [label="{BusinessesController|\l|\l|\l}", shape=Mrecord, pos="67,56", width="1.86", height="1.33"];
+	CustomersController [label="{CustomersController|\l|\l|\l}", shape=Mrecord, pos="218,56", width="1.83", height="1.33"];
+	InvoicesController [label="{InvoicesController|\l|\l|\l}", shape=Mrecord, pos="362,56", width="1.67", height="1.33"];
+	LineItemsController [label="{LineItemsController|\l|\l|\l}", shape=Mrecord, pos="505,56", width="1.81", height="1.33"];
+	ProductsController [label="{ProductsController|\l|\l|\l}", shape=Mrecord, pos="649,56", width="1.69", height="1.33"];
+	SessionsController [label="{SessionsController|\l|\l|\l}", shape=Mrecord, pos="789,56", width="1.69", height="1.33"];
+	UsersController [label="{UsersController|\l|\l|\l}", shape=Mrecord, pos="920,56", width="1.44", height="1.33"];
+	WarehouseController [label="{WarehouseController|\l|\l|back_to_the_index_page\lget_basket\l}", shape=Mrecord, pos="1068,56", width="2.17", height="1.56"];
+	ApplicationController [label="{ApplicationController|\l|\l|\l}", shape=Mrecord, pos="1234,56", width="1.94", height="1.33"];
+}

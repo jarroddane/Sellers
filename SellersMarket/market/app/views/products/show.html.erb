@@ -1,3 +1,5 @@
+<div id="main-product-show">
+
 <p>
   <b>Label:</b>
   <%=h @product.label %>
@@ -23,6 +25,10 @@
 	<%=h @product.price %> 
 </p>
 
+</div>
+
+<div id="product-show-links">
 
 <%= link_to 'Edit', edit_product_path(@product) %> |
 <%= link_to 'Back', products_path %>
+</div>
